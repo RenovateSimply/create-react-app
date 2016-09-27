@@ -1,5 +1,5 @@
 {
-  "name": "react-scripts",
+  "name": "@andyhite/react-scripts",
   "version": "0.6.0",
   "description": "Configuration and scripts for Create React App.",
   "repository": "facebookincubator/create-react-app",

@@ -1,5 +1,5 @@
 {
-  "name": "react-dev-utils",
+  "name": "@andyhite/react-dev-utils",
   "version": "0.2.0",
   "description": "Webpack utilities used by Create React App",
   "repository": "facebookincubator/create-react-app",

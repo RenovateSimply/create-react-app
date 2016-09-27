@@ -1,5 +1,5 @@
 {
-  "name": "eslint-config-react-app",
+  "name": "@andyhite/eslint-config-react-app",
   "version": "0.2.1",
   "description": "ESLint configuration used by Create React App",
   "repository": "facebookincubator/create-react-app",
