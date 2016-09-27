@@ -32,5 +32,8 @@
   },
   "peerDependencies": {
     "webpack": "^1.13.2"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
