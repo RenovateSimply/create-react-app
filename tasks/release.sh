@@ -72,9 +72,6 @@ npm dedupe
 # Since it's in optionalDependencies, it will attempt install outside bundle
 rm -rf node_modules/fsevents
 
-# This modifies $clean_path/package.json to copy all dependencies to bundledDependencies
-node ./node_modules/.bin/bundle-deps
-
 cd $clean_path
 
 # Go!
