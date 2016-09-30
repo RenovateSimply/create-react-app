@@ -9,6 +9,7 @@
 'use strict';
 
 var path = require('path');
+var relayPlugin = require('react-scripts/plugins/relay');
 
 module.exports = {
   presets: [
@@ -71,4 +72,7 @@ if (env === 'production') {
   // plugins.push.apply(plugins, [
   //   require.resolve('babel-plugin-transform-react-constant-elements')
   // ]);
+}
+if (relayPlugin.isEnabled()) {
+  plugins.unshift(require.resolve('./plugins/babelRelayPlugin'))
 }

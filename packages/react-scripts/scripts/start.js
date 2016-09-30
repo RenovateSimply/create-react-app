@@ -30,6 +30,7 @@ var openBrowser = require('react-dev-utils/openBrowser');
 var prompt = require('react-dev-utils/prompt');
 var config = require('../config/webpack.config.dev');
 var paths = require('../config/paths');
+var relayPlugin = require('../plugins/relay');
 
 // Warn and crash if required files are missing
 if (!checkRequiredFiles([paths.appHtml, paths.appIndexJs])) {
@@ -262,7 +263,12 @@ function run(port) {
 // run on a different port. `detect()` Promise resolves to the next free port.
 detect(DEFAULT_PORT).then(port => {
   if (port === DEFAULT_PORT) {
-    run(port);
+    if (relayPlugin.isEnabled()) {
+      relayPlugin.start().then(() => run(port));
+    } else {
+      run(port);
+    }
+
     return;
   }
 
@@ -273,7 +279,11 @@ detect(DEFAULT_PORT).then(port => {
 
   prompt(question, true).then(shouldChangePort => {
     if (shouldChangePort) {
-      run(port);
+      if (relayPlugin.isEnabled()) {
+        relayPlugin.start().then(() => run(port));
+      } else {
+        run(port);
+      }
     }
   });
 });

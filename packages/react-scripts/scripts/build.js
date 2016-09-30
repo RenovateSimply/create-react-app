@@ -30,6 +30,7 @@ var paths = require('../config/paths');
 var checkRequiredFiles = require('react-dev-utils/checkRequiredFiles');
 var recursive = require('recursive-readdir');
 var stripAnsi = require('strip-ansi');
+var relayPlugin = require('../plugins/relay');
 
 // Warn and crash if required files are missing
 if (!checkRequiredFiles([paths.appHtml, paths.appIndexJs])) {
@@ -78,7 +79,11 @@ recursive(paths.appBuild, (err, fileNames) => {
   rimrafSync(paths.appBuild + '/*');
 
   // Start the webpack build
-  build(previousSizeMap);
+  if (relayPlugin.isEnabled()) {
+    relayPlugin.build().then(() => build(previousSizeMap));
+  } else {
+    build(previousSizeMap);
+  }
 
   // Merge with the public folder
   copyPublicFolder();

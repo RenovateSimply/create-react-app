@@ -46,6 +46,7 @@ module.exports = {
   testsSetup: resolveApp('src/setupTests.js'),
   appNodeModules: resolveApp('node_modules'),
   ownNodeModules: resolveApp('node_modules'),
+  schema: resolveApp('schema.json'),
   nodePaths: nodePaths
 };
 
@@ -66,6 +67,7 @@ module.exports = {
   appNodeModules: resolveApp('node_modules'),
   // this is empty with npm3 but node resolution searches higher anyway:
   ownNodeModules: resolveOwn('../node_modules'),
+  schema: resolveApp('schema.json'),
   nodePaths: nodePaths
 };
 // @remove-on-eject-end
@@ -81,6 +83,7 @@ module.exports = {
   testsSetup: resolveOwn('../template/src/setupTests.js'),
   appNodeModules: resolveOwn('../node_modules'),
   ownNodeModules: resolveOwn('../node_modules'),
+  schema: resolveOwn('schema.json'),
   nodePaths: nodePaths
 };
 // @remove-on-publish-end
