@@ -96,6 +96,9 @@ module.exports = {
       // Support React Native Web
       // https://www.smashingmagazine.com/2016/08/a-glimpse-into-the-future-with-react-native-for-web/
       'react-native': 'react-native-web'
+      // Avoid multiple copies of react being loaded
+      'react': path.join(paths.appNodeModules, 'react'),
+      'react-dom': path.join(paths.appNodeModules, 'react-dom')
     }
   },
   // @remove-on-eject-begin
