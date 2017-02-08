@@ -30,5 +30,8 @@
     "opn": "4.0.2",
     "sockjs-client": "1.0.1",
     "strip-ansi": "3.0.1"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }

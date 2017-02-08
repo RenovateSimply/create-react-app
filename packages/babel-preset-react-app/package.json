@@ -24,5 +24,8 @@
     "babel-preset-latest": "6.16.0",
     "babel-preset-react": "6.16.0",
     "babel-runtime": "6.11.6"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
