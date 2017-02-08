@@ -26,5 +26,8 @@
     "fs-extra": "^1.0.0",
     "semver": "^5.0.3",
     "validate-npm-package-name": "^3.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
