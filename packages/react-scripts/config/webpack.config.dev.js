@@ -93,7 +93,8 @@ module.exports = {
       'react-native': 'react-native-web',
       // Avoid multiple copies of react being loaded
       'react': path.join(paths.appNodeModules, 'react'),
-      'react-dom': path.join(paths.appNodeModules, 'react-dom')
+      'react-dom': path.join(paths.appNodeModules, 'react-dom'),
+      'react-redux': path.join(paths.appNodeModules, 'react-redux')
     }
   },
   // @remove-on-eject-begin
