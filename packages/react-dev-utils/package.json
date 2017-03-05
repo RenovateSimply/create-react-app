@@ -1,5 +1,5 @@
 {
-  "name": "react-dev-utils",
+  "name": "@renovatesimply/react-dev-utils",
   "version": "0.5.1",
   "description": "Webpack utilities used by Create React App",
   "repository": "facebookincubator/create-react-app",
@@ -30,5 +30,8 @@
     "opn": "4.0.2",
     "sockjs-client": "1.1.2",
     "strip-ansi": "3.0.1"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }

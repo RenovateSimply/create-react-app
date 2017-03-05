@@ -1,5 +1,5 @@
 {
-  "name": "react-scripts",
+  "name": "@renovatesimply/react-scripts",
   "version": "0.9.3",
   "description": "Configuration and scripts for Create React App.",
   "repository": "facebookincubator/create-react-app",
@@ -71,5 +71,8 @@
   },
   "optionalDependencies": {
     "fsevents": "1.0.17"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
